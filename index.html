@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Required meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Bootstrap CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <title>PT4 - Online Shopping Cart System</title>
+
+        <body>
+            <div class="bg-dark p-3">
+                <div class="row bg-light mx-0 py-3">
+                    <div class="col-sm-8">
+                        <p>Order #58 <small class="text-muted">Today, 12 Aug 2022, 04:00 AM</small></p>
+                        <div class="card rounded-3 mb-3">
+                            <div class="card-body">
+                                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                    <button class="nav-link active rounded-pill" id="pills-food-tab" data-bs-toggle="pill" data-bs-target="#pills-food" type="button" role="tab" aria-controls="pills-food" aria-selected="true">FOOD</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                    <button class="nav-link rounded-pill" id="pills-drink-tab" data-bs-toggle="pill" data-bs-target="#pills-drink" type="button" role="tab" aria-controls="pills-drink" aria-selected="false">DRINK</button>
+                                    </li>
+                                    <li class="nav-item d-none" role="presentation">
+                                    <button class="nav-link rounded-pill" id="pills-checkout-tab" data-bs-toggle="tab" data-bs-target="#pills-checkout" type="button" role="tab" aria-controls="pills-checkout" aria-selected="false">CHECK OUT</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!--ALL TABS-->
+                          <div class="tab-content" id="pills-tabContent">
+                            <!--FOOD TAB-->
+                            <div class="tab-pane fade show active" id="pills-food" role="tabpanel" aria-labelledby="pills-food-tab">
+                                <div class="row row-cols-1 row-cols-md-4 g-4">
+                                    <div class="col">
+                                      <div class="card" onclick="orderbasket('Pulled Pork Burger', 149.00);">
+                                        <img draggable="false" src="http://cdn1.bigcommerce.com/n-ww20x/t9imb/products/934/images/1583/mexchshrbrg__97980.1402501176.1280.1280.jpg?c=2" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Pulled Pork Burger</h5>
+                                          <p class="card-text fw-bold">₱ 149.00</p>
+                                        </div>
+                                      </div>
+
+                                    </div>
+                                    <div class="col">
+                                      <div class="card" onclick="orderbasket('Double Quarter Pounder Burger', 239.00);">
+                                        <img draggable="false" src="https://www.kitchensanctuary.com/wp-content/uploads/2021/05/Double-Cheeseburger-tall-FS-38.webp" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Double Quarter Pounder Burger</h5>
+                                          <p class="card-text fw-bold">₱ 239.00</p>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col">
+                                      <div class="card" onclick="orderbasket('Smoked Ham Burger', 179.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/43/6e/29/436e29b6115798c439fdb9bd320fbbeb.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Smoked Ham Burger</h5>
+                                          <p class="card-text fw-bold">₱ 179.00</p>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col">
+                                      <div class="card" onclick="orderbasket('Katsu Curry Fried Chicken Burger', 159.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/ea/91/40/ea9140cad4c79be090769609b64fa37a.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Katsu Curry Fried Chicken Burger</h5>
+                                          <p class="card-text fw-bold">₱ 159.00</p>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card" onclick="orderbasket('Shrimp Pesto Pasta', 229.00);">
+                                          <img draggable="false" src="https://i.pinimg.com/564x/92/71/93/927193a884ad7ff2ed6f2809678f3ddf.jpg" class="card-img-top" alt="...">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Shrimp Pesto Pasta</h5>
+                                            <p class="card-text fw-bold">₱ 229.00</p>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                    <div class="col">
+                                        <div class="card" onclick="orderbasket('Pasta Puttanesca', 219.00);">
+                                            <img draggable="false" src="https://i.pinimg.com/564x/98/7c/04/987c0437ef6780053bed4eaf7588b07e.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Pasta Puttanesca</h5>
+                                            <p class="card-text fw-bold">₱ 219.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card" onclick="orderbasket('Fettuccine Alfredo', 199.00);">
+                                            <img draggable="false" src="https://i.pinimg.com/564x/0c/72/31/0c723101cee329dec6fe9cc4678e4a9b.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Fettuccine Alfredo</h5>
+                                            <p class="card-text fw-bold">₱ 199.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card" onclick="orderbasket('Seafood Oriental Pasta', 279.00);">
+                                            <img draggable="false" src="https://i.pinimg.com/564x/fd/51/16/fd5116bc51bd63ebaa0fd82d09adc336.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Seafood Oriental Pasta</h5>
+                                            <p class="card-text fw-bold">₱ 279.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card" onclick="orderbasket('Pepperoni Pizza', 549.00);">
+                                          <img draggable="false" src="https://i.pinimg.com/564x/b4/89/f3/b489f3e5baf69e10bf76a81feb5ec48d.jpg" class="card-img-top" alt="...">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Pepperoni and Cheese Pizza</h5>
+                                            <p class="card-text fw-bold">₱ 549.00</p>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                    <div class="col">
+                                        <div class="card" onclick="orderbasket('Meat and Veggies Pizza', 629.00);">
+                                            <img draggable="false" src="https://i.pinimg.com/564x/34/f4/8f/34f48f5c56c938642b80b0555e5adf82.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Meat and Veggies Pizza</h5>
+                                            <p class="card-text fw-bold">₱ 629.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card" onclick="orderbasket('Hawaiian Pizza', 499.00);">
+                                            <img draggable="false" src="https://i.pinimg.com/564x/97/4f/5c/974f5c902c3b56349d7a7274e5d5c8fb.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Hawaiian Pizza</h5>
+                                            <p class="card-text fw-bold">₱ 499.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card" onclick="orderbasket('New Yorks Style Pizza', 729.00);">
+                                            <img draggable="false" src="https://i.pinimg.com/564x/fe/50/2b/fe502b6473d7705fba172ea075aced51.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                            <h5 class="card-title">New York's Style Pizza</h5>
+                                            <p class="card-text fw-bold">₱ 729.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <!--DRINK TAB-->
+                        <div class="tab-pane fade" id="pills-drink" role="tabpanel" aria-labelledby="pills-drink-tab">
+                            <div class="row row-cols-1 row-cols-md-4 g-4">
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Coca-Cola', 59.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/68/62/de/6862deae730cd85c0e54831567f9d737.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Coca-Cola</h5>
+                                        <p class="card-text fw-bold">₱ 59.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Iced Tea', 79.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/f1/9a/e7/f19ae7e3564fedecee25468010ebd1eb.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Iced Tea</h5>
+                                        <p class="card-text fw-bold">₱ 79.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Cucumber Lemonade', 89.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/7c/5b/80/7c5b80c0e047358e6511ee201f28d64b.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Cucumber Lemonade</h5>
+                                        <p class="card-text fw-bold">₱ 89.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Strawberry Milkshake', 129.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/31/e5/c3/31e5c30e8a1af6557d0660bb7a5f3a5e.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Strawberry Milkshake</h5>
+                                        <p class="card-text fw-bold">₱ 129.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Iced Americano', 99.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/93/50/8d/93508dfce47fd1d677be051d6527a0b4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Iced Americano</h5>
+                                        <p class="card-text fw-bold">₱ 99.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Iced Coffee Latte', 119.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/38/4e/60/384e6075849ba6118d07f523a75814ca.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Iced Coffee Latte</h5>
+                                        <p class="card-text fw-bold">₱ 119.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Iced Caramel Macchiato', 149.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/3f/b1/08/3fb10877dd3d0d85024622c0868b5d4c.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Iced Caramel Macchiato</h5>
+                                        <p class="card-text fw-bold">₱ 149.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Iced Coffee Mocha', 139.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/bc/a2/d6/bca2d661a2fc70a4b6305b420ad911c7.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Iced Coffee Mocha</h5>
+                                        <p class="card-text fw-bold">₱ 139.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Tequila Sunrise', 179.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/c2/c7/9e/c2c79e61ef34d60de62f8be363e8d716.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Tequila Sunrise</h5>
+                                        <p class="card-text fw-bold">₱ 179.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Margarita', 159.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/08/7e/d3/087ed382a5de9d45d245dbe9d121a457.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Margarita</h5>
+                                        <p class="card-text fw-bold">₱ 159.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Mojito', 149.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/86/0a/5d/860a5d0fa94212d0f5473de3a65ec912.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Mojito</h5>
+                                        <p class="card-text fw-bold">₱ 149.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card" onclick="orderbasket('Pina Colada', 139.00);">
+                                        <img draggable="false" src="https://i.pinimg.com/564x/5b/ea/d7/5bead7d6afb631d1b4d78ac89ba060c0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Pina Colada</h5>
+                                        <p class="card-text fw-bold">₱ 139.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--CHECKOUT TAB-->
+                        <div class="tab-pane fade" id="pills-checkout" role="tabpanel" aria-labelledby="pills-checkout-tab">
+                            <div class="row mb-3">
+                                <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Customer Name</label>
+                                <div class="col-sm-9">
+                                  <input type="text" class="text-center form-control form-control-lg" id="customername" placeholder="OR#19">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Total Amount</label>
+                                <div class="col-sm-9">
+                                  <input type="number" step="0.01" class="text-center form-control form-control-lg" id="amount" placeholder="₱ 0.00" disabled>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Payment</label>
+                                <div class="col-sm-9">
+                                    <input type="number" step="0.01" class="text-center form-control form-control-lg" id="amountpaid" placeholder="₱ 0.00">
+                                    <!--<button class="btn btn-dark btn-lg w-100">₱ 0.00</button>-->
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg"></label>
+                                <div class="col-sm-9">
+                                    <button class="btn btn-primary btn-lg w-100 rounded-pill" onclick="calculateChange()">PAID</button>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Change</label>
+                                <div class="col-sm-9">
+                                  <input type="number" step="0.01" class="text-center form-control form-control-lg text-danger fw-bold" id="change" placeholder="₱ 0.00" disabled>
+                                </div>
+                            </div>
+
+                        </div>
+                          
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="d-flex justify-content-between align-items-center">
+                                <span>Order</span>
+                                <button class="btn btn-sm btn-danger rounded-pill" onclick="orderbasketclear();">Clear</button></h5>
+                            <hr>
+                            <ul id="orderlist" class="list-unstyled"
+                                style="height: 50vh; overflow-y: auto;">
+                                <!--<li class="d-flex justify-content-between align-items-center">
+                                    <span>Caramel Frappe</span> <span class="text-danger">₱ 119.00</span>
+                                </li>-->
+                            </ul>
+                            <hr>
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <big>Total Items: </big>
+                                    <big id="totalitems" class="card-text fw-bold">0</big>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <big>Total Amount: </big>
+                                    <big class="fw-bold">₱ <span id="totalcost" class="card-text">0.00</span></big>
+                                </li>
+                                <li>
+                                    <hr>
+                                    <button disabled="true" id="checkOutButton" onclick="goToCheckoutTab();" class="btn btn-primary btn-lg w-100 rounded-pill">CHECK OUT</button>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+
+            <script>
+                const orderidarray = [];
+                const orderitemsarray = [];
+                const orderpricearray = [];
+                const orderarray = [];
+                let i = 0;
+
+                function orderbasket(itemname, itemprice) {
+                    orderidarray.push(i);
+                    orderitemsarray.push(itemname);
+                    orderpricearray.push(itemprice);
+                    orderarray.push(itemname, itemprice);
+
+                    let orderlist = document.getElementById('orderlist');
+
+                    //create the li tag
+                    const orderitem = document.createElement('li');
+                    orderitem.className = 'd-flex justify-content-between align-items-center';
+
+                    //create a span for red color
+                    const orderitempricespan = document.createElement('span');
+
+                    //create text to li with itemname and itemprice
+                    const orderitemname = document.createTextNode(itemname);
+                    const orderitemprice = document.createTextNode(' ₱ ' + itemprice);
+
+                    //adjust text color to text-danger
+                    orderitempricespan.className = 'text-danger';
+
+                    //add pricetextnode into span
+                    orderitempricespan.appendChild(orderitemprice);
+
+                    //create a delete button
+                    const deletebutton = document.createElement('button');
+                    const deletebuttontext = document.createTextNode('X');
+                    deletebutton.setAttribute('onclick', 'deleteItem('+i+', this)');
+
+                    //append the text to deletebutton
+                    deletebutton.appendChild(deletebuttontext);
+
+                    deletebutton.className = 'btn btn-danger rounded-pill';
+
+                    //attach name and price to li tag
+                    orderitem.appendChild(orderitemname);
+
+                    //create a span for red color
+                    const orderitemleftsidespan = document.createElement('span');
+                    orderitemleftsidespan.appendChild(orderitemname);
+                    orderitemleftsidespan.appendChild(orderitempricespan);
+
+                    orderitem.appendChild(orderitemleftsidespan);
+
+                    //attach the deletebutton and text into li tag
+                    orderitem.appendChild(deletebutton);
+
+                    //attach li tag to id=orderlist
+                    orderlist.appendChild(orderitem);
+
+                    totalitems();
+                    totalcost();
+                    i++; //increment i
+                    enableCheckoutButton();
+                };
+
+                function totalitems(){
+                    document.getElementById('totalitems').innerText = orderitemsarray.length;
+                };
+
+                function totalcost(){
+                    if(orderpricearray.length===0){
+                        document.getElementById('totalcost').innerText = 0;
+                        return 0;
+                    } else {
+                        document.getElementById('totalcost').innerText = orderpricearray.reduce(sumArray).toFixed(2);
+                        document.getElementById('amount').value = orderpricearray.reduce(sumArray).toFixed(2);
+                        
+                        function sumArray(total, num) {
+                            return total + num;
+                        };
+                        //orderpricearray.reduce(itemprice);
+                    };
+                };
+
+                function orderbasketclear(){
+                    let orderlist = document.getElementById('orderlist');
+                    document.getElementById('amount').value = 0;
+                    orderlist.innerHTML = '';
+                    orderitemsarray.length = 0;
+                    orderpricearray.length = 0;
+                    orderarray.length = 0;
+                    orderidarray.length = 0;
+                    i = 0;
+                    totalitems();
+                    totalcost();
+                    enableCheckoutButton();
+                };
+
+                function deleteItem(orderid, button){
+                    //const indexnum = orderidarray.indexOf(orderid);
+                    orderidarray.splice(orderidarray.indexOf(orderid), 1);
+                    orderitemsarray.splice(orderidarray.indexOf(orderid), 1);
+                    orderpricearray.splice(orderidarray.indexOf(orderid), 1);
+
+                    totalitems();
+                    totalcost();
+
+                    orderlist.removeChild(button.parentElement);
+
+                    if(orderpricearray.length === 0) {
+                        document.getElementById('amount').value = 0;
+                    };
+
+                    enableCheckoutButton();
+                };
+
+                function calculateChange(){
+                    const amountPaid = document.getElementById('amountpaid');
+                    const amountChange = document.getElementById('change');
+                    amountChange.value = amountPaid.value - document.getElementById('amount').value;
+                };
+
+                function goToCheckoutTab(){
+                    const checkOutTabEl = document.getElementById('pills-checkout-tab');
+                    const checkOutTab = new bootstrap.Tab(checkOutTabEl);
+                    checkOutTab.show();
+                };
+
+                function enableCheckoutButton(){
+                    const checkOutButton = document.getElementById('checkOutButton');
+                    checkOutButton.disabled = true;
+
+                    if(orderidarray.length > 0){
+                        checkOutButton.disabled = false;
+                    };
+                    if(orderidarray.length == 0){
+                        const foodTabEl = document.getElementById('pills-food-tab');
+                        const foodTab = new bootstrap.Tab(foodTabEl);
+                        foodTab.show();
+                    };
+                };
+
+            </script>
+
+        </body>
+        
+
+    </head>
+</html>
